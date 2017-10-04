@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JndiWebPractice</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <env-entry>
+    <env-entry-name>TestJNDIKey</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>This can be some application specific JNDI data</env-entry-value>
+  </env-entry>
+  <servlet>
+    <servlet-name>JndiTestServlet</servlet-name>
+    <servlet-class>gagan.jndi.web.servlet.JndiTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JndiTestServlet</servlet-name>
+    <url-pattern>/TestJNDI</url-pattern>
+  </servlet-mapping>
+</web-app>
